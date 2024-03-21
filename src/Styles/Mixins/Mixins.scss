@@ -1,0 +1,11 @@
+@mixin head-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin hero-text-flex{
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    text-align: center;
+}

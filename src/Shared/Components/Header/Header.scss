@@ -1,0 +1,119 @@
+@import '../../../Styles/index.scss';
+
+.bgcolour {
+
+    .Container {
+        padding: 0 20px;
+        margin: 0 auto;
+
+        .header {
+            @include head-flex;
+            padding: 8px 16px;
+            justify-content: space-between;
+            @media(max-width:576px){
+                padding: 0;
+                height: 70px;
+                display: block;
+            
+            }
+            @media(max-width:768px){
+                padding: 0;
+                height: 70px;
+                display: block;
+            }
+            .logo {
+            
+                cursor: pointer;
+
+                img {
+                @media(max-width:576px){
+                    height: 70px;
+                    width: 70px;
+                 
+                }
+                @media(max-width:768px){
+                    height: 80px;
+                    width: 80px;
+                }
+              
+                    height: 100px;
+                    width: 100px;
+                }
+            }
+            .menubar-drop{
+                display: none;
+                @media(max-width:576px){
+                    display: block;
+                    position: absolute;
+                  top: 20px;
+                  right: 5%;
+                  @include head-flex;
+                  gap: 5px;
+                  .menuicon{
+                    height: 25px;
+                    width: 25px ;
+                  }
+                }
+                @media(max-width:768px){
+                    display: block;
+                    position: absolute;
+                  top: 20px;
+                  right: 5%;
+                  @include head-flex;
+                  gap: 5px;
+                  .menuicon{
+                    height: 30px;
+                    width: 30px ;
+                  }
+                }
+            }
+
+            .navbar {
+              @media(max-width:576px){
+                display: none;
+                .navitems{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+              }
+              @media(max-width:768px){
+                display: none;
+                .navitems{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                } 
+              }
+                .navitems {
+                    @include head-flex;
+                    list-style: none;
+
+                    li {
+                        padding: 11px 22px;
+
+                        a {
+                            @include fonts1;
+                            font-weight: 400;
+
+                            &::after {
+                                transition: .3s ease-in-out;
+                                content: "";
+                                display: block;
+                                width: 0;
+                                height: 2px;
+                                background-color: #343434;
+                                margin: 0 auto;
+                            }
+
+                            &:hover::after {
+                                width: 100%;
+                                transition: .3s ease-in-out;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
